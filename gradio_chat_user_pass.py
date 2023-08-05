@@ -7,7 +7,7 @@ def random_response(message, history):
 def same_auth(username, password):
     return username == password
 
-demo = gr.ChatInterface(random_response)
+iface = gr.ChatInterface(random_response)
 
-demo.launch(auth=same_auth)
+iface.launch(auth=same_auth, server_name="0.0.0.0", server_port=7860)
 
